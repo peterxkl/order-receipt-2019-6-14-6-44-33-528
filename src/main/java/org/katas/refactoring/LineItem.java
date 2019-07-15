@@ -3,12 +3,12 @@
 public class LineItem {
     private String description;
     private double price;
-    private int count;
+    private int quantity;
 
     public LineItem(String description, double price, int count) {
         this.description = description;
         this.price = price;
-        this.count = count;
+        this.quantity = quantity;
     }
 
     public String getDescription() {
@@ -20,10 +20,10 @@ public class LineItem {
     }
 
     public int getCount() {
-        return count;
+        return quantity;
     }
 
     double totalAmount() {
-        return price*count;
+        return price*quantity;
     }
 }
