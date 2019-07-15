@@ -1,4 +1,4 @@
-package org.katas.refactoring;
+//package org.katas.refactoring;
 
 /**
  * OrderReceipt prints the details of order including customer name, address, description, quantity,

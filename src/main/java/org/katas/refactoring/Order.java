@@ -1,4 +1,4 @@
-package org.katas.refactoring;
+//package org.katas.refactoring;
 
 import java.util.List;
 
