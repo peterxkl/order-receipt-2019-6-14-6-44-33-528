@@ -1,4 +1,4 @@
-//package org.katas.refactoring;
+package org.katas.refactoring;
 
 
 
@@ -23,7 +23,7 @@ public class OrderReceiptTest {
     @Test
     public void shouldPrintLineItemAndSalesTaxInformation() {
         ArrayList<LineItem> lineItems = new ArrayList<LineItem>() {{
-            add(new LineItem("milk", 10.0, 2));
+            add(new LineItem("milk", 10.0,2));
             add(new LineItem("biscuits", 5.0, 5));
             add(new LineItem("chocolate", 20.0, 1));
         }};

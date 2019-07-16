@@ -1,11 +1,11 @@
-//package org.katas.refactoring;
+package org.katas.refactoring;
 
 public class LineItem {
     private String description;
     private double price;
     private int quantity;
 
-    public LineItem(String description, double price, int count) {
+    public LineItem(String description, double price, int quantity) {
         this.description = description;
         this.price = price;
         this.quantity = quantity;
@@ -19,7 +19,7 @@ public class LineItem {
         return price;
     }
 
-    public int getCount() {
+    public int getQuantity() {
         return quantity;
     }
 
