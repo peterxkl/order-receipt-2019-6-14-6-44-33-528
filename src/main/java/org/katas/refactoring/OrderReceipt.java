@@ -16,6 +16,9 @@ public class OrderReceipt {
 
         printOrders(output);
 
+        final double taxRate = .10;
+        final double totalSalesTax = order.getLineItems().stream().mapToDouble(x->x.totalAmount()*taxRate).sum();
+        final double total = order.getLineItems().stream().mapToDouble(x->x.totalAmount()).sum()+totalSalesTax;
         for (LineItem lineItem : order.getLineItems()) {
             output.append(lineItem.getDescription());
             output.append('\t');
@@ -25,10 +28,6 @@ public class OrderReceipt {
             output.append('\t');
             output.append(lineItem.totalAmount());
             output.append('\n');
-            
-            salesTax = lineItem.totalAmount() * .10;
-            totalSalesTax += salesTax;
-            total += lineItem.totalAmount() + salesTax;
         }
         output.append("Sales Tax").append('\t').append(totalSalesTax);
         output.append("Total Amount").append('\t').append(total);
